@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace:UserMapper接口的全限定名
+-->
+<mapper namespace="com.itheima.mapper.UserMapper">
+
+
+    <!--
+        select:该节点仅用于查询
+        id:id的值和UserMapper接口的方法名字一致
+        resultType:对应的类型的全限定名和接口中方法返回转换类型保持一致
+     -->
+    <select id="findAll" resultType="com.itheima.domain.User">
+        SELECT * FROM  user
+    </select>
+
+    <select id="getOne" resultType="com.itheima.domain.User">
+        SELECT * FROM  user WHERE id=1
+    </select>
+
+</mapper>
